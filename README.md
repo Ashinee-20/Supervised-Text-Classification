@@ -17,7 +17,7 @@ Used the BBC Dataset for performing this task, which consisted of
 * Implemented Multinomial Naive Bayes Algorithm
 * Attained an Accuracy of 97%
 
-### Model Results
+#### Model Results
 ![My Image](results.jpg)
 
 
@@ -28,5 +28,5 @@ Created Frontend using HTML, CSS and Backend using Flask
 * The application consists of two routes: the root route ('/') displays an input form for text, and the '/predict' route processes the user's input and returns the predicted category to be displayed on the web page.
 * Hosted the website in Python Anywhere Platform
 
-### Website image
+#### Website image
 ![My Image](frontend.jpg)
