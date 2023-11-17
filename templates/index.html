@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Classification</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <img src="static\logo.jpeg" alt="Logo" class="logo">
+        <div class="header-content">
+            <h2>Dept. Of Information Technology</h2>
+            <h2 style="font-size: small;">National Institute of Technology Karnataka, Surathkal - 575025</h2>
+            <h2 style="font-size:xx-large;">Unsupervised Text Classification</h2>
+            <h2 style="font-size: large;">Team Members</h2>
+            <h2 style="font-size:large;">Kesanam Ashinee (211AI023)        Renukasakshi V Patil (211AI030)</h2>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Unsupervised Text Classification using Bi-level Ensemble Method based Unsupervised Feature Selection</h1>
+        <form action="/predict" method="post">
+            <textarea name="text" placeholder="Enter a text for category prediction" rows="5">{{ request.form['text'] }}</textarea>
+            <input type="submit" value="Predict">
+            <input type="button" value="Reload" onclick="clearTextArea()">
+        </form>
+        {% if prediction %}
+            <p class="result" id="prediction">{{ prediction }}</p>
+        {% endif %}
+    </div>
+
+    <script>
+        function clearTextArea() {
+            var textArea = document.querySelector('textarea');
+            textArea.value = "";
+            
+            var prediction = document.getElementById('prediction');
+            prediction.textContent = "Predicted Category: None";
+        }
+    </script>
+</body>
+</html>
