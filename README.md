@@ -16,4 +16,4 @@ Used the BBC Dataset for performing this task, which consisted of
 ## Model
 * Implemented Multinomial Naive Bayes Algorithm
 * Attained an Accuracy of 97%
-![My Image] 
+![My Image](results.jpg)
